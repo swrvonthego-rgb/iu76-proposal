@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your Legacy. Built Right. | SWRV OTG × Freedom Fix Solutions</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<!-- ══ SUPABASE INIT ══ -->
+<script>
+  const SUPABASE_URL = 'https://jbnwpgvzyykqyqagzcjt.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpibndwZ3Z6eXlrcXlxYWd6Y2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxMTE0NzcsImV4cCI6MjA5NTY4NzQ3N30.NUNwgH8BNJQXFlBlg0Zaeh4vzvhmnHQEc7LUWhNcjAk';
+  let sb;
+  try { sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY); }
+  catch(e) { console.warn('Supabase init error:', e); }
+  const urlParams = new URLSearchParams(window.location.search);
+  const clientToken = urlParams.get('token');
+</script>
+
+<!-- ══ CLIENT ACCESS VIEW ══ -->
+<div class="access-view" id="accessView">
+  <div class="access-header">
+    <div class="footer-logos" style="justify-content:center; margin-bottom:24px;">
+      <span class="footer-logo">Freedom Fix Solutions</span>
+      <span class="footer-x">×</span>
+      <span class="footer-logo">SWRV On The Go LLC</span>
+    </div>
+    <h1 style="font-family:'Playfair Display',serif; font-size:clamp(28px,5vw,44px); margin-bottom:12px;">
+      Your Proposal Summary
+    </h1>
+    <p style="color:var(--text-dim); font-size:15px;">This page was prepared exclusively for you. Bookmark it — it will always be here.</p>
+  </div>
+  <div id="accessContent">
+    <div class="loading-msg">Loading your proposal...</div>
+  </div>
+</div>
+
+<!-- ══ MAIN PROPOSAL SITE ══ -->
+<div id="mainSite">
+
+  <div class="video-bar">
+    <span>🎬 See what we can build for you</span>
+    <button onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Get Your Custom Plan →</button>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge"><span class="dot"></span>Prepared exclusively for IU '76 Team Legacy Initiative</div>
+    <h1>Your Legacy<br/><span class="gold">Deserves</span> More<br/>Than a Link.</h1>
+    <p class="hero-sub">A proposal from SWRV On The Go &amp; Freedom Fix Solutions</p>
+    <button class="hero-cta" onclick="document.getElementById('coach').scrollIntoView({behavior:'smooth'})">See What We Built For You</button>
+    <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
+  </div>
+
+  <!-- COACH -->
+  <div class="coach-section" id="coach">
+    <div class="coach-inner">
+      <div class="section-label">Before We Talk Price</div>
+      <h2 class="section-title">The questions that determine<br/>how much money you leave on the table.</h2>
+      <p class="section-body">The brands that struggle online all share one thing — they built a presence before they built a foundation. Here's what we evaluate first.</p>
+      <div class="coach-grid">
+        <div class="coach-card">
+          <span class="icon">🌐</span>
+          <h3>Can someone find you at 2am from a gas station bathroom?</h3>
+          <p>If your web address takes more than 4 seconds to say out loud or type on a phone keyboard, you are losing people every single day. We assess your domain for memorability and mobile ease before anything else.</p>
+          <span class="tag">Brand Foundation</span>
+        </div>
+        <div class="coach-card">
+          <span class="icon">📱</span>
+          <h3>Does your name translate to a URL that makes sense?</h3>
+          <p>"IU 1976 Team Legacy Initiative" is powerful in a room. On a phone screen it becomes an obstacle. We find the short, ownable version of your brand that still carries the full weight of your story.</p>
+          <span class="tag">Digital Identity</span>
+        </div>
+        <div class="coach-card">
+          <span class="icon">🏆</span>
+          <h3>Is your audience able to contribute to your mission right now?</h3>
+          <p>Legacy initiatives often have the story but no clear transaction. We build the bridge between your mission and the moment someone decides to donate, purchase, or share.</p>
+          <span class="tag">Revenue Path</span>
+        </div>
+        <div class="coach-card">
+          <span class="icon">🎬</span>
+          <h3>Would a stranger trust this story in 30 seconds?</h3>
+          <p>The 1975-76 Indiana Hoosiers story deserves cinematic treatment. We assess whether your current materials create instant credibility or require someone to already know who you are.</p>
+          <span class="tag">Trust & Story</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIERS -->
+  <div class="tiers-section">
+    <div class="section-label">Your Investment Options</div>
+    <h2 class="section-title">Three ways to move.<br/>One direction.</h2>
+    <p class="section-body">Every tier gets you moving. The difference is how fast you grow and how much of the market you capture in year one.</p>
+    <div class="tiers-grid">
+      <div class="tier-card">
+        <div class="tier-name">Tier 1 — Seed</div>
+        <div class="tier-title">Essential Foundation</div>
+        <div class="tier-price"><strong>$3,500 – $5,500</strong>one-time + $1,500/mo</div>
+        <ul class="tier-items">
+          <li>1-page professional landing site</li>
+          <li>1 strategy session + brand audit</li>
+          <li>Short-form video commercial</li>
+          <li>Social channel setup (6 starter posts)</li>
+          <li>Up to 10 product/service listings</li>
+          <li>Basic monthly management (2 posts/week)</li>
+        </ul>
+        <button class="tier-btn secondary" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Start Here</button>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-name">Tier 2 — Growth</div>
+        <div class="tier-title">Full Launch</div>
+        <div class="tier-price"><strong>$9,500</strong>one-time + $3,500/mo</div>
+        <ul class="tier-items">
+          <li>Full multi-page custom website</li>
+          <li>Deep strategy playbook + competitor analysis</li>
+          <li>High-impact digital billboard commercial</li>
+          <li>12+ custom social posts (launch pack)</li>
+          <li>Optimized storefront, up to 10 listings</li>
+          <li>1-2 min brand story / founder video</li>
+          <li>4 posts/week + paid ad management</li>
+          <li>Bi-weekly optimization + monthly reporting</li>
+        </ul>
+        <button class="tier-btn primary" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">This Is Our Recommendation</button>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name">Tier 3 — Scale</div>
+        <div class="tier-title">Premium Ecosystem</div>
+        <div class="tier-price"><strong>$18,000 – $25,000+</strong>one-time + $7,500/mo</div>
+        <ul class="tier-items">
+          <li>Custom UX/UI website + deep market research</li>
+          <li>Premium cinematic commercial</li>
+          <li>3-5 min mini-documentary (multi-day filming)</li>
+          <li>30-day robust content launch pack</li>
+          <li>Premium member community build</li>
+          <li>Daily posting + full-funnel ad management</li>
+          <li>Influencer outreach + dedicated account manager</li>
+          <li>Weekly reporting + omnichannel scaling</li>
+        </ul>
+        <button class="tier-btn secondary" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Go Premium</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- QUIZ -->
+  <div class="quiz-section" id="quiz">
+    <div class="quiz-inner">
+      <div class="section-label">Build Your Plan</div>
+      <h2 class="section-title" style="margin-bottom:12px;">Answer 5 quick questions.<br/>We'll tell you exactly where to start.</h2>
+      <p class="section-body" style="margin-bottom:48px;">No jargon. No pressure. Just the clearest path forward.</p>
+
+      <div class="quiz-progress" id="quizProgress">
+        <div class="quiz-progress-dot done" id="dot0"></div>
+        <div class="quiz-progress-dot" id="dot1"></div>
+        <div class="quiz-progress-dot" id="dot2"></div>
+        <div class="quiz-progress-dot" id="dot3"></div>
+        <div class="quiz-progress-dot" id="dot4"></div>
+      </div>
+
+      <div class="quiz-step active" id="step0">
+        <div class="quiz-q">Does your organization have a website right now?</div>
+        <div class="quiz-hint">Be honest — we've helped people at every stage. No judgment here.</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="selectOpt(this,0,'no-site')">
+            <span class="opt-icon">❌</span>
+            <div class="opt-text"><strong>No website at all</strong><span>We exist, but we're not online yet</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,0,'old-site')">
+            <span class="opt-icon">⚠️</span>
+            <div class="opt-text"><strong>We have something, but it needs work</strong><span>Outdated or hard to use on a phone</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,0,'good-site')">
+            <span class="opt-icon">✅</span>
+            <div class="opt-text"><strong>We have a decent site</strong><span>But it's not generating leads or donations</span></div>
+          </button>
+        </div>
+        <div class="quiz-nav"><span></span><button class="quiz-next" id="next0" disabled onclick="goToStep(1)">Continue →</button></div>
+      </div>
+
+      <div class="quiz-step" id="step1">
+        <div class="quiz-q">If someone hears about you and wants to find you online — what do they type?</div>
+        <div class="quiz-hint">If it takes more than 3 seconds to say out loud, it may be costing you people every day.</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="selectOpt(this,1,'short')">
+            <span class="opt-icon">💡</span>
+            <div class="opt-text"><strong>Something short and simple</strong><span>Like "1976hoosiers.com" — easy on a phone</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,1,'long')">
+            <span class="opt-icon">📋</span>
+            <div class="opt-text"><strong>Our full organization name</strong><span>It's long, but it's official</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,1,'unsure')">
+            <span class="opt-icon">🤷</span>
+            <div class="opt-text"><strong>We honestly don't have one yet</strong><span>We need help figuring this out first</span></div>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" onclick="goToStep(0)">← Back</button>
+          <button class="quiz-next" id="next1" disabled onclick="goToStep(2)">Continue →</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" id="step2">
+        <div class="quiz-q">What do you want people to be able to DO when they find you?</div>
+        <div class="quiz-hint">Pick the one that matters most right now. We can always add more later.</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="selectOpt(this,2,'donate')">
+            <span class="opt-icon">🤝</span>
+            <div class="opt-text"><strong>Donate or contribute to the legacy fund</strong><span>Support from fans, alumni, and community</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,2,'merch')">
+            <span class="opt-icon">🏀</span>
+            <div class="opt-text"><strong>Buy merchandise or memorabilia</strong><span>Jerseys, collectibles, signed items, legacy gear</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,2,'events')">
+            <span class="opt-icon">🎟️</span>
+            <div class="opt-text"><strong>Register for events or reunions</strong><span>Ticket sales, RSVP, speaking engagements</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,2,'all')">
+            <span class="opt-icon">🌟</span>
+            <div class="opt-text"><strong>All of the above, eventually</strong><span>We need everything — let's build it right</span></div>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" onclick="goToStep(1)">← Back</button>
+          <button class="quiz-next" id="next2" disabled onclick="goToStep(3)">Continue →</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" id="step3">
+        <div class="quiz-q">How comfortable is your team with technology day-to-day?</div>
+        <div class="quiz-hint">This helps us build something your team can actually manage — without needing us for every small update.</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="selectOpt(this,3,'low')">
+            <span class="opt-icon">📞</span>
+            <div class="opt-text"><strong>We prefer a phone call over an app</strong><span>Keep it simple — we need you to handle the tech side</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,3,'mid')">
+            <span class="opt-icon">📧</span>
+            <div class="opt-text"><strong>We can do email and basic social media</strong><span>As long as it's not too complicated, we can manage</span></div>
+          </button>
+          <button class="quiz-opt" onclick="selectOpt(this,3,'high')">
+            <span class="opt-icon">💻</span>
+            <div class="opt-text"><strong>We're comfortable with most digital tools</strong><span>We can handle dashboards and updates ourselves</span></div>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" onclick="goToStep(2)">← Back</button>
+          <button class="quiz-next" id="next3" disabled onclick="goToStep(4)">Continue →</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" id="step4">
+        <div class="quiz-q">What's your name and the best email to reach you?</div>
+        <div class="quiz-hint">We'll send your personalized plan within 24 hours. No sales calls unless you ask for one.</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <input class="quiz-input" id="clientName" type="text" placeholder="Your name" oninput="checkStep4()"/>
+          <input class="quiz-input" id="clientEmail" type="email" placeholder="Your email address" oninput="checkStep4()"/>
+          <input class="quiz-input" id="clientOrg" type="text" placeholder="Your organization (optional)"/>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" onclick="goToStep(3)">← Back</button>
+          <button class="quiz-next" id="next4" disabled onclick="submitQuiz()">Get My Plan →</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" id="stepResult">
+        <div id="submitStatus" class="loading-msg" style="display:none;">Saving your plan...</div>
+        <div class="result-box" id="resultBox" style="display:none;">
+          <div class="result-icon">🏆</div>
+          <h2 id="resultTitle">Your Legacy Plan Is Ready.</h2>
+          <p id="resultBody">Based on your answers, here's our honest recommendation.</p>
+          <div class="result-rec">
+            <div class="label">Our Recommendation</div>
+            <h3 id="recTier">Tier 2 — Full Launch Package</h3>
+            <div class="price" id="recPrice">$9,500</div>
+            <div class="price-note" id="recNote">One-time setup + $3,500/mo ongoing management</div>
+          </div>
+          <p id="resultDetail" style="font-size:14px;color:#888;line-height:1.7;margin-bottom:8px;text-align:left;"></p>
+          <div id="tokenLinkBox" style="margin:20px 0; padding:16px; background:var(--deep); border:1px solid var(--border); border-radius:6px; text-align:left; display:none;">
+            <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Your Personal Proposal Link</div>
+            <div id="tokenLink" style="font-size:13px;color:var(--platinum);word-break:break-all;margin-bottom:12px;"></div>
+            <div style="font-size:12px;color:var(--text-dim);">Bookmark this link. It will always show your plan and recommendation — no login needed.</div>
+          </div>
+          <button class="tier-btn primary" style="max-width:340px;margin:0 auto;" onclick="confirmReady()">
+            Confirm — I'm Ready to Move Forward
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logos">
+      <span class="footer-logo">Freedom Fix Solutions</span>
+      <span class="footer-x">×</span>
+      <span class="footer-logo">SWRV On The Go LLC</span>
+    </div>
+    <p><a href="https://www.swrvonthego.pro" style="color:var(--text-dim);">www.swrvonthego.pro</a> &nbsp;·&nbsp; We rescue your vision.<br/>
+    <span style="color:#555;">This proposal was prepared exclusively for IU '76 Team Legacy Initiative.</span></p>
+  </footer>
+
+</div>
+
+<script src="js/quiz.js"></script>
+<script src="js/access.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (clientToken) loadClientView(clientToken);
+  });
+</script>
+</body>
+</html>
