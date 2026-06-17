@@ -99,21 +99,23 @@
       <div class="tier-card">
         <div class="tier-name">Tier 1 — Seed</div>
         <div class="tier-title">Essential Foundation</div>
-        <div class="tier-price"><strong>$3,500 – $5,500</strong>one-time + $1,500/mo</div>
+        <div class="tier-price"><strong>$5,500</strong>one-time</div>
         <ul class="tier-items">
-          <li>1-page professional landing site</li>
+          <li>3-page professional website (Homepage, Team Bios, Contact)</li>
           <li>1 strategy session + brand audit</li>
           <li>Short-form video commercial</li>
           <li>Social channel setup (6 starter posts)</li>
           <li>Up to 10 product/service listings</li>
-          <li>Basic monthly management (2 posts/week)</li>
+          <li>Basic monthly management (2 posts/week)†</li>
+          <li>E-commerce available as add-on†</li>
         </ul>
+        <p class="tier-footnote">† Monthly management and e-commerce are add-on services billed separately. To start: $2,500 deposit — nothing goes live until balance is paid in full.</p>
         <button class="tier-btn secondary" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Start Here</button>
       </div>
       <div class="tier-card featured">
         <div class="tier-name">Tier 2 — Growth</div>
         <div class="tier-title">Full Launch</div>
-        <div class="tier-price"><strong>$9,500</strong>one-time + $3,500/mo</div>
+        <div class="tier-price"><strong>$9,500</strong>one-time</div>
         <ul class="tier-items">
           <li>Full multi-page custom website</li>
           <li>Deep strategy playbook + competitor analysis</li>
@@ -121,15 +123,16 @@
           <li>12+ custom social posts (launch pack)</li>
           <li>Optimized storefront, up to 10 listings</li>
           <li>1-2 min brand story / founder video</li>
-          <li>4 posts/week + paid ad management</li>
-          <li>Bi-weekly optimization + monthly reporting</li>
+          <li>4 posts/week + paid ad management†</li>
+          <li>Bi-weekly optimization + monthly reporting†</li>
         </ul>
+        <p class="tier-footnote">† Ad spend budget provided by client. Monthly management is an add-on billed separately. To start: $4,500 deposit — nothing goes live until balance is paid in full.</p>
         <button class="tier-btn primary" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">This Is Our Recommendation</button>
       </div>
       <div class="tier-card">
         <div class="tier-name">Tier 3 — Scale</div>
         <div class="tier-title">Premium Ecosystem</div>
-        <div class="tier-price"><strong>$18,000 – $25,000+</strong>one-time + $7,500/mo</div>
+        <div class="tier-price"><strong>$18,000 – $25,000+</strong>one-time</div>
         <ul class="tier-items">
           <li>Custom UX/UI website + deep market research</li>
           <li>Premium cinematic commercial</li>
@@ -140,7 +143,20 @@
           <li>Influencer outreach + dedicated account manager</li>
           <li>Weekly reporting + omnichannel scaling</li>
         </ul>
+        <p class="tier-footnote">Additional add-ons available. To start: $9,500 deposit — nothing goes live until balance is paid in full.</p>
         <button class="tier-btn secondary" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Go Premium</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="tiers-addons">
+      <div class="addons-box">
+        <div class="addons-title">Consultations</div>
+        <p>Initial consultation (up to 30 min) is <strong>complimentary</strong> — just to understand your goals and see where you're at. Any strategy calls or team consultations beyond 30 minutes are billed at <strong>$150/hr</strong>.</p>
+      </div>
+      <div class="addons-box">
+        <div class="addons-title">Payment Plans &amp; BNPL</div>
+        <p>Payment plans and Buy Now, Pay Later options are available. Ask us about flexible arrangements — we work with you to get moving without waiting.</p>
       </div>
     </div>
   </div>
@@ -279,7 +295,7 @@
             <div class="label">Our Recommendation</div>
             <h3 id="recTier">Tier 2 — Full Launch Package</h3>
             <div class="price" id="recPrice">$9,500</div>
-            <div class="price-note" id="recNote">One-time setup + $3,500/mo ongoing management</div>
+            <div class="price-note" id="recNote">One-time setup. Monthly management available as add-on.</div>
           </div>
           <p id="resultDetail" style="font-size:14px;color:#888;line-height:1.7;margin-bottom:8px;text-align:left;"></p>
           <div id="tokenLinkBox" style="margin:20px 0; padding:16px; background:var(--deep); border:1px solid var(--border); border-radius:6px; text-align:left; display:none;">
